@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POTZ | uiyoung Project Case Study</title>
+    <meta
+      name="description"
+      content="Exploring POTZ: A location-based community delivery fee sharing service."
+    />
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header>
+      <nav class="navbar">
+        <a href="../index.html" class="logo-link"
+          ><div class="logo">uiyoung</div></a
+        >
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">projects</a></li>
+          <li><a href="../blog/index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container content-page">
+      <section class="case-study fade-in">
+        <div class="project-header">
+          <div class="project-icon" style="font-size: 4rem">
+            <i class="fas fa-motorcycle"></i>
+          </div>
+          <h1 class="highlight">POTZ</h1>
+          <p class="subtitle">
+            Community-Driven Delivery Savings via Hyper-Local Coordination.
+          </p>
+        </div>
+
+        <div
+          class="glass case-study-content"
+          style="padding: 3rem; margin-top: 2rem"
+        >
+          <h2>Project Context</h2>
+          <p>
+            In South Korea, high delivery fees have become a significant burden
+            for individuals living in small communities or apartment complexes.
+            POTZ (파츠) was developed as a solution to this problem, enabling
+            neighbors to coordinate food orders and split delivery costs fairly.
+          </p>
+
+          <h3>Core Concept</h3>
+          <p>
+            The project focuses on
+            <strong>"Social Delivery Delivery" (공동 구매 배달)</strong>. By
+            using location-based services, POTZ identifies neighbors who are
+            interested in ordering from the same restaurant or area. This not
+            only saves money but also reduces the carbon footprint associated
+            with multiple separate deliveries.
+          </p>
+
+          <h3>Key Functionalities</h3>
+          <ul style="margin: 1rem 0 2rem 1.5rem; color: var(--text-muted)">
+            <li>
+              <strong>Location-Based Matching:</strong> Users can see active
+              "delivery pots" in their immediate surroundings.
+            </li>
+            <li>
+              <strong>Real-time Chatting:</strong> Integrated communication for
+              coordinating order details and pickup locations.
+            </li>
+            <li>
+              <strong>Fair Fee Splitting:</strong> Automated calculation of
+              delivery fees based on the number of participants.
+            </li>
+            <li>
+              <strong>Secure Payment:</strong> Trusted systems for handling
+              community transactions.
+            </li>
+          </ul>
+
+          <h3>Tech Stack & Development</h3>
+          <p>
+            POTZ was built using <strong>React for the frontend</strong> to
+            provide a seamless SPA experience, and
+            <strong>Express.js with MySQL</strong> for a robust backend. We
+            utilized <strong>Prisma</strong> as our ORM to ensure type-safe
+            database interactions.
+          </p>
+          <p>
+            Implementing real-time updates for chat and "pot" status was a
+            significant challenge. We used <strong>Socket.io</strong> to manage
+            live connections, ensuring that when a new neighbor joins a "pot,"
+            everyone is notified instantly. This creates a sense of living
+            community within the app.
+          </p>
+
+          <h3>Lessons Learned</h3>
+          <p>
+            Working on POTZ taught me the importance of
+            <strong>hyper-local UX</strong>. Users interact with the app
+            differently when it involves their physical neighbors. Trust and
+            speed are the most critical factors, which led us to prioritize a
+            "lightweight" and "fast" design philosophy throughout the
+            development stage.
+          </p>
+
+          <div
+            style="
+              margin-top: 3rem;
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+            "
+          >
+            <a
+              href="https://github.com/teamPotz/potz"
+              target="_blank"
+              class="btn btn-primary"
+              style="width: fit-content"
+              >View GitHub Repository</a
+            >
+            <a href="../index.html#projects" class="project-link"
+              ><i class="fas fa-arrow-left"></i> Back to Projects</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2026 uiyoung. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="../privacy-policy.html">Privacy Policy</a>
+              <a href="../terms.html">Terms of Service</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/uiyoung" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

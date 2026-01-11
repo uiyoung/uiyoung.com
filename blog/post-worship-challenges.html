@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sync Challenges | uiyoung Blog</title>
+    <!-- Same meta/links as above -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header>
+      <nav class="navbar">
+        <a href="../index.html" class="logo-link"
+          ><div class="logo">uiyoung</div></a
+        >
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">projects</a></li>
+          <li><a href="index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container content-page">
+      <article class="case-study-content fade-in">
+        <h1 class="highlight" style="font-size: 3rem; line-height: 1.2">
+          The Challenges of Synchronizing Multi-Display Systems
+        </h1>
+        <div class="blog-post-meta" style="margin-top: 1rem">
+          <span>Published on January 10, 2026</span>
+          <span>•</span>
+          <span>10 min read</span>
+        </div>
+
+        <div class="glass" style="padding: 3rem; margin-top: 2rem">
+          <p>
+            When developing <strong>Worship Presenter</strong>, the single
+            biggest technical hurdle wasn't the UI or the database—it was
+            <strong>Real-Time Synchronization</strong>.
+          </p>
+
+          <h2>The Architecture: Controller vs. Display</h2>
+          <p>
+            Unlike a simple website where every user sees their own state, a
+            presentation tool needs a "Controller" (the operator) and a
+            "Display" (the big screen). When the operator clicks "Next Slide,"
+            the display must update instantly, with near-zero latency.
+          </p>
+
+          <h2>Why Standard HTTP Fails</h2>
+          <p>
+            Traditional request-response cycles are too slow for live
+            performances. Even a 500ms delay in displaying lyrics can throw off
+            an entire band and congregation. We needed a bi-directional,
+            persistent connection.
+          </p>
+
+          <h2>The Solution: WebSockets (Socket.io)</h2>
+          <p>
+            I chose <strong>Socket.io</strong> to manage this layer. By
+            maintaining a persistent TCP connection between the server and all
+            clients, we can "push" events from the controller to the display.
+          </p>
+          <pre
+            style="
+              background: var(--bg-darker);
+              padding: 1.5rem;
+              border-radius: 12px;
+              margin: 1.5rem 0;
+              overflow-x: auto;
+              color: var(--secondary-color);
+            "
+          >
+socket.on('slideChange', (data) => {
+  renderSlide(data.slideId);
+});
+          </pre>
+
+          <h2>Handling Network Instability</h2>
+          <p>
+            In many church buildings, Wi-Fi can be unstable. We implemented a
+            "State Check" heartbeat. If a display loses connection for even a
+            second, it automatically reconnects and asks the server: "What is
+            the current slide?" This ensures that the display always stays in
+            sync with the operator's intent.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            Building real-time systems requires a shift in mindset from
+            "Stateless" to "Stateful." Through Worship Presenter, I've mastered
+            the nuances of event-driven architecture, ensuring that technology
+            serves the moment without getting in the way.
+          </p>
+
+          <div
+            style="
+              margin-top: 3rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--glass-border);
+            "
+          >
+            <a href="index.html" class="project-link"
+              ><i class="fas fa-arrow-left"></i> Back to Blog Index</a
+            >
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2026 uiyoung. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="../privacy-policy.html">Privacy Policy</a>
+              <a href="../terms.html">Terms of Service</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/uiyoung" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

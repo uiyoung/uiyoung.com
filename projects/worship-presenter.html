@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worship Presenter | uiyoung Project Case Study</title>
+    <meta
+      name="description"
+      content="In-depth look at Worship Presenter: A professional church presentation tool project."
+    />
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header>
+      <nav class="navbar">
+        <a href="../index.html" class="logo-link"
+          ><div class="logo">uiyoung</div></a
+        >
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">projects</a></li>
+          <li><a href="../blog/index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container content-page">
+      <section class="case-study fade-in">
+        <div class="project-header">
+          <div class="project-icon" style="font-size: 4rem">
+            <i class="fas fa-chalkboard-user"></i>
+          </div>
+          <h1 class="highlight">Worship Presenter</h1>
+          <p class="subtitle">
+            Streamlining Church Services through Intuitive Presentation
+            Technology.
+          </p>
+        </div>
+
+        <div
+          class="glass case-study-content"
+          style="padding: 3rem; margin-top: 2rem"
+        >
+          <h2>Project Overview</h2>
+          <p>
+            Worship Presenter is a specialized software solution designed to
+            meet the unique needs of religious organizations. During worship
+            services, the management of song lyrics, scripture readings, and
+            multi-modal media can be complex and error-prone. This project was
+            born out of a desire to create a tool that is both powerful and
+            accessible to volunteers who may not have extensive technical
+            training.
+          </p>
+
+          <h3>The Challenge</h3>
+          <p>
+            Many existing presentation tools are either too generic or overly
+            complex, requiring steep learning curves. Church environments often
+            operate with limited resources and rely on volunteers. The challenge
+            was to build a system that manages dynamic content in real-time
+            while providing a distraction-free environment for the congregation.
+          </p>
+
+          <h3>The Solution</h3>
+          <p>
+            I developed a web-based platform using
+            <strong>Node.js, Express, and Nunjucks</strong>. By leveraging
+            modern web standards, Worship Presenter provides a fast, responsive
+            interface that can be operated from any device with a browser. Key
+            features include:
+          </p>
+          <ul style="margin: 1rem 0 2rem 1.5rem; color: var(--text-muted)">
+            <li>
+              <strong>Intuitive Setlist Management:</strong> Quickly organize
+              songs and scripture for a specific service.
+            </li>
+            <li>
+              <strong>Live Preview & Control:</strong> Operators can see exactly
+              what is on the screen while managing the next slide.
+            </li>
+            <li>
+              <strong>Database Integration:</strong> Efficiently search and
+              store thousands of song lyrics and bibliographic data.
+            </li>
+            <li>
+              <strong>Customizable Themes:</strong> Easily adjust typography and
+              backgrounds to match the church's visual identity.
+            </li>
+          </ul>
+
+          <h3>Technical Implementation</h3>
+          <p>
+            On the frontend, I focused on heavy optimization to ensure zero-lag
+            during slide transitions. On the backend, I implemented a robust
+            session management system to allow multiple controllers to sync with
+            the main display. This distributed architecture allows for high
+            flexibility in various church setups.
+          </p>
+
+          <h3>Outcome & Impact</h3>
+          <p>
+            Worship Presenter has significantly reduced the preparation time for
+            Sunday services. Users report a 40% reduction in slide-related
+            errors, allowed the focus of the service to remain on the worship
+            experience itself.
+          </p>
+
+          <div
+            style="
+              margin-top: 3rem;
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+            "
+          >
+            <a
+              href="https://worship.uiyoung.com"
+              target="_blank"
+              class="btn btn-primary"
+              style="width: fit-content"
+              >Visit Live Site</a
+            >
+            <a href="../index.html#projects" class="project-link"
+              ><i class="fas fa-arrow-left"></i> Back to Projects</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2026 uiyoung. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="../privacy-policy.html">Privacy Policy</a>
+              <a href="../terms.html">Terms of Service</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/uiyoung" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

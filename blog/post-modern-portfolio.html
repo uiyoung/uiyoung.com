@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Modern Portfolio | uiyoung Blog</title>
+    <!-- Same meta/links as above -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header>
+      <nav class="navbar">
+        <a href="../index.html" class="logo-link"
+          ><div class="logo">uiyoung</div></a
+        >
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">projects</a></li>
+          <li><a href="index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container content-page">
+      <article class="case-study-content fade-in">
+        <h1 class="highlight" style="font-size: 3rem; line-height: 1.2">
+          Building a Modern Portfolio with Vanilla CSS & HTML
+        </h1>
+        <div class="blog-post-meta" style="margin-top: 1rem">
+          <span>Published on January 11, 2026</span>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+
+        <div class="glass" style="padding: 3rem; margin-top: 2rem">
+          <p>
+            When I decided to rebuild my personal website, the first question
+            was: <strong>Which framework should I use?</strong> React, Next.js,
+            and Astro were all strong contenders. However, for a landing page
+            designed to host my portfolio and a few blog posts, I realized that
+            "Vanilla" was the most powerful choice.
+          </p>
+
+          <h2>The Power of Pure Web Standards</h2>
+          <p>
+            Using pure HTML5 and CSS3 allows for ultra-fast load times and zero
+            dependency overhead. In the world of AdSense and SEO, "Speed is
+            King." By removing heavy JavaScript bundles, the Time to Interactive
+            (TTI) is virtually instantaneous.
+          </p>
+
+          <h2>Implementing Glassmorphism</h2>
+          <p>
+            The aesthetic of uiyoung.com relies heavily on
+            <strong>Glassmorphism</strong>. This effect is achieved through a
+            combination of <code>backdrop-filter: blur()</code>,
+            semi-transparent backgrounds, and subtle borders.
+          </p>
+          <pre
+            style="
+              background: var(--bg-darker);
+              padding: 1.5rem;
+              border-radius: 12px;
+              margin: 1.5rem 0;
+              overflow-x: auto;
+              color: var(--primary-color);
+            "
+          >
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+          </pre>
+          <p>
+            This creates a sleek, premium feel that doesn't distract from the
+            technical content but rather enhances it, providing a professional
+            "digital workspace" vibe.
+          </p>
+
+          <h2>Grid Layouts & Responsiveness</h2>
+          <p>
+            CSS Grid has completely changed the way we handle layouts. For the
+            projects section, I used
+            <code
+              >grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))</code
+            >. This single line of code handles everything from a 4-column
+            desktop layout to a 1-column mobile view seamlessly.
+          </p>
+
+          <h2>Why This Matters for AdSense</h2>
+          <p>
+            Google AdSense values <strong>User Experience (UX)</strong>. A site
+            that is easy to navigate, fast to load, and visually consistent has
+            a much higher chance of approval. Moving away from "link-tree" style
+            pages to content-rich, custom-coded environments is the first step
+            toward building a high-value digital asset.
+          </p>
+
+          <div
+            style="
+              margin-top: 3rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--glass-border);
+            "
+          >
+            <a href="index.html" class="project-link"
+              ><i class="fas fa-arrow-left"></i> Back to Blog Index</a
+            >
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2026 uiyoung. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="../privacy-policy.html">Privacy Policy</a>
+              <a href="../terms.html">Terms of Service</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/uiyoung" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

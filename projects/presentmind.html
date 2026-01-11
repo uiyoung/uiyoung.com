@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PresentMind Lab | uiyoung Project Case Study</title>
+    <meta
+      name="description"
+      content="Exploring PresentMind Sati and Sana: AI-driven mindfulness and mental wellness tools."
+    />
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header>
+      <nav class="navbar">
+        <a href="../index.html" class="logo-link"
+          ><div class="logo">uiyoung</div></a
+        >
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">projects</a></li>
+          <li><a href="../blog/index.html">blog</a></li>
+          <li><a href="../about.html">about</a></li>
+          <li><a href="../contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container content-page">
+      <section class="case-study fade-in">
+        <div class="project-header">
+          <div class="project-icon" style="font-size: 4rem">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h1 class="highlight">PresentMind Lab</h1>
+          <p class="subtitle">
+            Harnessing AI to Cultivate Awareness and Emotional Well-being.
+          </p>
+        </div>
+
+        <div
+          class="glass case-study-content"
+          style="padding: 3rem; margin-top: 2rem"
+        >
+          <h2>Introduction</h2>
+          <p>
+            PresentMind Lab is a laboratory of digital tools aimed at enhancing
+            the human mind. In a world of constant distractions and rising
+            stress, I wanted to explore how
+            <strong>Artificial Intelligence</strong> could be used not just for
+            automation, but for genuine mental support and mindfulness practice.
+            This led to the creation of two flagship applications:
+            <strong>Sati</strong> and <strong>Sana</strong>.
+          </p>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 2rem;
+              margin: 2rem 0;
+            "
+          >
+            <div class="glass" style="padding: 2rem">
+              <h3 style="color: var(--secondary-color)">
+                <i class="fas fa-leaf"></i> Sati: Mindfulness Guide
+              </h3>
+              <p>
+                Sati is a web-based AI mindfulness guide. It uses natural
+                language processing to help users navigate their present
+                feelings and provides personalized meditation prompts.
+              </p>
+            </div>
+            <div class="glass" style="padding: 2rem">
+              <h3 style="color: var(--accent-color)">
+                <i class="fas fa-heart-pulse"></i> Sana: Mental Companion
+              </h3>
+              <p>
+                Sana is an AI companion designed for emotional healing. It
+                offers a safe space for supportive conversations 24/7, helping
+                users process their emotions through structured empathy.
+              </p>
+            </div>
+          </div>
+
+          <h3>The Vision</h3>
+          <p>
+            The vision behind PresentMind Lab is to make mental wellness
+            accessible to everyone. Traditional therapy and meditation retreats
+            are valuable but can be expensive or time-consuming. By providing an
+            always-available, AI-driven interface, we bridge the gap between
+            "need" and "support."
+          </p>
+
+          <h3>Technical Deep Dive</h3>
+          <p>
+            Both Sati and Sana are powered by <strong>OpenAI's LLM API</strong>,
+            fine-tuned with specific instructions designed by psychological
+            experts. We used <strong>Next.js</strong> for the frontend to ensure
+            fast, server-side rendered interactions, which is critical for the
+            "conversational" feel.
+          </p>
+          <p>
+            A major technical hurdle was maintaining "Stateful Empathy." The AI
+            needs to remember the emotional context of a conversation without
+            compromising user privacy. We solved this using encrypted local
+            storage and anonymous session tokens, ensuring that the Lab is a
+            truly private sanctuary for the mind.
+          </p>
+
+          <h3>Design Philosophy</h3>
+          <p>
+            The design of PresentMind Lab is intentionally minimal. We use "Soft
+            UI" principles—muted colors, gentle blurs, and organic shapes—to
+            minimize cognitive load and create a calming environment from the
+            first click.
+          </p>
+
+          <div style="margin-top: 3rem; display: flex; gap: 1.5rem">
+            <a
+              href="https://presentmind-lab.kr/apps/web-sati"
+              target="_blank"
+              class="btn btn-primary"
+              >Try Sati</a
+            >
+            <a
+              href="https://presentmind-lab.kr/apps/sana"
+              target="_blank"
+              class="btn btn-secondary"
+              >Try Sana</a
+            >
+          </div>
+          <div style="margin-top: 1rem">
+            <a href="../index.html#projects" class="project-link"
+              ><i class="fas fa-arrow-left"></i> Back to Projects</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2026 uiyoung. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="../privacy-policy.html">Privacy Policy</a>
+              <a href="../terms.html">Terms of Service</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/uiyoung" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
